@@ -3,7 +3,7 @@
 
 var wins = 0;
 var losses = 0;
-var guessesLeft = 3;
+var guessesLeft = 13;
 var guessedLetters = [];
 
 // COMP RANDOM OPTS
@@ -12,7 +12,7 @@ var computerOpts = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
 
 // GLOBAL FUNCTION
 function gameReset () {
-	guessesLeft = 3;
+	guessesLeft = 13;
 	guessedLetters = [];
 
 }
@@ -56,9 +56,9 @@ function gameReset () {
 					guessedLetters.push(userGuess);
 				}
 
-			} // END OF IF FUNCT
+			} // END OF IF FUNCTS
 
-			 
+	 
 
 
 		// SCORE BOARD
@@ -70,7 +70,7 @@ function gameReset () {
 
 
 		// DISPLAY SCORE BOARD HTML
-			var scoreboard = "<p> LETTERS ALREADY GUESSED: " + guessedLetters.join(', ') + "</p>" + "<p> WINS: " + wins + "</p>" + "<p> LOSSES: " + losses + "</p>";
+			var scoreboard = "<p> LETTERS ALREADY GUESSED: " + guessedLetters.join(', ') + "<p> # OF GUESSES LEFT: " + guessesLeft + "</p>" + "</p>" + "<p> WINS: " + wins + "</p>" + "<p> LOSSES: " + losses + "</p>";
 
 			document.querySelector("#psychic_game").innerHTML = scoreboard
 
